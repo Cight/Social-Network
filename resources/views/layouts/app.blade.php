@@ -13,6 +13,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <!-- Custom Styles -->
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -56,9 +59,8 @@
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false" style="position: relative; padding-left: 50px;">
-                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}"
-                                     style="width: 32px; height: 32px; float: left; position: absolute; top: 10px; left: 10px; border-radius: 50%; "/>
+                               aria-expanded="false" id="profile_pos">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" id="profile_pic_nav"/>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
